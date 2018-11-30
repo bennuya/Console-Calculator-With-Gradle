@@ -19,4 +19,10 @@ public class CalculatorTest {
         assertTrue(testE.addition(10, 25) == 35);
     }
 
+    @Test
+    public void testNegative() {
+        testE = new Calculator();
+        assertFalse(testE.addition(10, 25) == 35);
+    }
+
 }
