@@ -22,13 +22,7 @@ public class CalculatorTest {
     @Test
     public void testNegative() {
         testE = new Calculator();
-        assertFalse(testE.addition(10, 25) == 35);
-    }
-
-    @Test
-    public void testNull() {
-        testE = new Calculator();
-        assertNull(testE.addition(10, 25) == 35);
+        assertTrue(testE.addition(-10, -25) == -35);
     }
 
 }
