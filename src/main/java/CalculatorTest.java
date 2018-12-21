@@ -45,4 +45,30 @@ public class CalculatorTest {
         assertTrue(testE.subtraction(-10, -5) == -5);
     }
 
+    // multiplication methods
+    @Test
+    public void testPositiveMulti() {
+        testE = new Calculator();
+        assertTrue(testE.multiply(10, 5) == 50);
+    }
+
+    @Test
+    public void testNegativeMulti() {
+        testE = new Calculator();
+        assertTrue(testE.multiply(-10, -5) == 50);
+    }
+
+    // converter methods
+    @Test
+    public void testPositiveConvert() {
+        testE = new Calculator();
+        assertTrue(testE.converterToHex(10).equals("a"));
+    }
+
+    @Test
+    public void testNegativeConvert() {
+        testE = new Calculator();
+        assertTrue(testE.converterToHex(-10).equals("fffffff6"));
+    }
+
 }
