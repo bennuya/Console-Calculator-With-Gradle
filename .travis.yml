@@ -1,0 +1,14 @@
+language: java
+sudo: false
+script: gradle build
+before_deploy:
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
+deploy:
+  provider: releases
+  api_key:
+    secure: pgtWx0XCMEv4tJ1TFOSLVrWjmBd/UHcLctUZtBHzoVLW6iapo0DCMkHxmUkTdvJsyH0MvZK1BRDAfas+U53+u31XOuyp3YyPL3EqEXmUqLdbn1KnUzf96ToCJCdKK2hBwCcMF3F6psYo35Xgl7ZwrBio3arM+VXl2mQKrMy9sB50T5H1POf59tEz/xg4JYMI/wbERqRzdaAzeE+Scb6CPmmxsvMT4Mk+Yn/ThCo/Y53wE1g2t4kvlQOq7x4NgJTxTimz2Z51bYf1sFUdDc/UJ9Z1cpw8zpkx1PSOCMhLzAuPh2tmbEOxr5XvowmV5uygxZO1sm1gjn3bQVFlz6CQEROYFjcwBbRphmmBYx1vBtK6EXIQbTcnd7AeEWFkh/20dI7msj1uVdiWqqKM0L3pu2XZWzAqRO85yxLhTpIS0T3Ne6ly8I/yeOj4x2iokwkh3jQVmKKtVPzd8kfRPQNtbRkEn2WwUGfi24EgsQ2xonlRA7MTxj+BZarwUjFN/cwLHANI3ZCxaQ2rI9YPQ+GaSbWmWc7H2LJAAmrcabew+Zf6zncSJNaxvRE45tKSjp350jemqvSWfQE/vNZyfNo7XSDShQhYLkotJgJhJyB28y7RlfoiKc7X4AN1Ruvi6/ABqyaeDpvVzqLg2d2aRzN294Io3V3ONYx/aWs+nAJrzC4=
+  file: build/libs/console-calculator-1.0-SNAPSHOT.jar
+  skip_cleanup: true
+  on:
+    repo: spicymemequeen/Console-Calculator-With-Gradle
