@@ -1,5 +1,5 @@
-/*
-Main Class
+package ch.bbw.ceur.console_calculator;/*
+ch.bbw.ceur.console_calculator.Main Class
 @author celina urwank
 @version 16.11.2018
  */
