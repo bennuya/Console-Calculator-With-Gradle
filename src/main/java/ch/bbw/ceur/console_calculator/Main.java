@@ -1,3 +1,5 @@
+package ch.bbw.ceur.console_calculator;
+
 /*
 Main Class
 @author celina urwank
