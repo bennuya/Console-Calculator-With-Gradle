@@ -1,3 +1,3 @@
-# Console ch.bbw.ceur.console_calculator.Calculator With Gradle
+# Console Calculator With Gradle
 
 M426
